@@ -4,6 +4,7 @@ const url = require('./Url');
 
 let statusCode = 200;
 let error = {
+    badRequest: 400,
     badGateway: 502
 };
 
@@ -14,7 +15,7 @@ router.post('/', async (req, res) => {
 
     // when error is present
     if(response.error) 
-        statusCode = error.badGateway;
+        statusCode = error.badRequest;
         
     // prepare the response
     response = {
@@ -34,7 +35,7 @@ router.get('/:slug', async (req, res) => {
     
     // when error is present
     if(response.error) 
-        statusCode = error.badGateway;
+        statusCode = error.badRequest;
         
     // prepare the response
     response = {
@@ -54,7 +55,7 @@ router.delete('/:slug', async (req, res) => {
     
     // when error is present
     if(response.error) 
-        statusCode = error.badGateway;
+        statusCode = error.badRequest;
         
     // prepare the response
     response = {
