@@ -15,6 +15,7 @@ const corsOptions = {
 };
 
 // for url routes
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use('/api/v1/url', urlRoutes);
 
