@@ -6,7 +6,8 @@ const port = process.env.PORT || 3001;
 const urlRoutes = require('./controllers/Url/Routes');
 
 const allowedSites = [
-    'http://localhost:4200',
+    'http://localhost:3000',
+    'https://gentle-cove-19493.herokuapp.com'
 ];
 
 const corsOptions = {
